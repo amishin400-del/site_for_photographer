@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Алексей Ланской • Светлая фотография</title>
+  
+  <!-- Preloader (светлый) -->
+  <style>
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: #faf8f5;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.6s ease, visibility 0.6s;
+    }
+    .spinner {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 3px solid rgba(180, 140, 80, 0.15);
+      border-top-color: #b48c50;
+      animation: spin 0.9s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #preloader.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  </style>
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Основной CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- НАВИГАЦИЯ (фиксированная, светлая) -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo" aria-label="На главную">AL</a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#about" class="nav__link">Обо мне</a>
+        <a href="#portfolio" class="nav__link">Портфолио</a>
+        <a href="#pricing" class="nav__link">Услуги</a>
+        <a href="#testimonials" class="nav__link">Отзывы</a>
+        <a href="#contact" class="nav__link">Контакты</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Меню"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO с параллаксом (светлый) -->
+    <section id="hero" class="hero section">
+      <div class="parallax-bg" id="parallaxBg"></div>
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <h1 class="hero__title fade-up">Алексей Ланской</h1>
+        <p class="hero__subtitle fade-up delay-1">Снимаю эмоции и детали, которые остаются навсегда</p>
+        <a href="#portfolio" class="btn btn--accent fade-up delay-2">Смотреть портфолио</a>
+      </div>
+      <div class="scroll-hint">
+        <span>листайте</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- О СЕБЕ -->
+    <section id="about" class="about section">
+      <div class="container about__grid">
+        <div class="about__text reveal">
+          <h2 class="section-title">Обо мне</h2>
+          <p class="about__desc">В объективе моей камеры — искренность момента. Для меня фотография не просто кадр, а история, рассказанная светом. Работаю в Москве и по всему миру, создаю визуальные образы, которые вы будете пересматривать годами.</p>
+          <div class="stats">
+            <div class="stat-item">
+              <span class="stat-number">7+</span>
+              <span class="stat-label">лет опыта</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">150+</span>
+              <span class="stat-label">съёмок</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">эмоций</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__image reveal">
+          <!-- ЗАМЕНИТЕ НА СВОЁ ФОТО -->
+          <img src="https://images.pexels.com/photos/2781193/pexels-photo-2781193.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Алексей Ланской - фотограф">
+          <div class="about__image-badge"><i class="fas fa-camera"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОРТФОЛИО -->
+    <section id="portfolio" class="portfolio section">
+      <div class="container">
+        <h2 class="section-title reveal">Портфолио</h2>
+        <div class="portfolio__grid">
+          <!-- ЗАМЕНИТЕ ИЗОБРАЖЕНИЯ -->
+          <div class="portfolio-item reveal">
+            <img src="https://images.pexels.com/photos/1722196/pexels-photo-1722196.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Портрет">
+            <div class="portfolio-item__overlay">
+              <span class="portfolio-item__genre">Портрет</span>
+            </div>
+          </div>
+          <div class="portfolio-item reveal">
+            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Love Story">
+            <div class="portfolio-item__overlay">
+              <span class="portfolio-item__genre">Love Story</span>
+            </div>
+          </div>
+          <div class="portfolio-item reveal">
+            <img src="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Репортаж">
+            <div class="portfolio-item__overlay">
+              <span class="portfolio-item__genre">Репортаж</span>
+            </div>
+          </div>
+          <div class="portfolio-item reveal">
+            <img src="https://images.pexels.com/photos/3249931/pexels-photo-3249931.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Детали">
+            <div class="portfolio-item__overlay">
+              <span class="portfolio-item__genre">Детали</span>
+            </div>
+          </div>
+          <div class="portfolio-item reveal">
+            <img src="https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Свадьба">
+            <div class="portfolio-item__overlay">
+              <span class="portfolio-item__genre">Свадьба</span>
+            </div>
+          </div>
+          <div class="portfolio-item reveal">
+            <img src="https://images.pexels.com/photos/1704473/pexels-photo-1704473.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fashion">
+            <div class="portfolio-item__overlay">
+              <span class="portfolio-item__genre">Fashion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- УСЛУГИ И ЦЕНЫ (светлые карточки) -->
+    <section id="pricing" class="pricing section">
+      <div class="container">
+        <h2 class="section-title reveal">Услуги и цены</h2>
+        <div class="pricing__cards">
+          <!-- Базовая -->
+          <div class="card reveal">
+            <h3 class="card__title">Базовый</h3>
+            <div class="card__price">15 000 ₽</div>
+            <ul class="card__features">
+              <li><i class="fas fa-check"></i> 1 час съёмки</li>
+              <li><i class="fas fa-check"></i> 15 фото в ретуши</li>
+              <li><i class="fas fa-check"></i> Локация в студии</li>
+              <li><i class="fas fa-check"></i> Консультация</li>
+            </ul>
+            <button class="btn btn--outline book-btn">Забронировать</button>
+          </div>
+          <!-- Расширенная -->
+          <div class="card card--popular reveal">
+            <div class="card__badge">популярный</div>
+            <h3 class="card__title">Расширенный</h3>
+            <div class="card__price">30 000 ₽</div>
+            <ul class="card__features">
+              <li><i class="fas fa-check"></i> 2.5 часа съёмки</li>
+              <li><i class="fas fa-check"></i> 35+ фото в ретуши</li>
+              <li><i class="fas fa-check"></i> 2 образа / локации</li>
+              <li><i class="fas fa-check"></i> Стилист в подарок</li>
+            </ul>
+            <button class="btn btn--accent book-btn">Забронировать</button>
+          </div>
+          <!-- Премиум -->
+          <div class="card reveal">
+            <h3 class="card__title">Премиум</h3>
+            <div class="card__price">55 000 ₽</div>
+            <ul class="card__features">
+              <li><i class="fas fa-check"></i> до 5 часов</li>
+              <li><i class="fas fa-check"></i> 70+ фото в ретуши</li>
+              <li><i class="fas fa-check"></i> Выездная съёмка</li>
+              <li><i class="fas fa-check"></i> Видео-бекстейдж</li>
+            </ul>
+            <button class="btn btn--outline book-btn">Забронировать</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ОТЗЫВЫ (слайдер) -->
+    <section id="testimonials" class="testimonials section">
+      <div class="container">
+        <h2 class="section-title reveal">Отзывы клиентов</h2>
+        <div class="slider-container reveal">
+          <div class="slider" id="slider">
+            <div class="slide">
+              <div class="testimonial-card">
+                <div class="testimonial__avatar">
+                  <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Анна">
+                </div>
+                <div class="testimonial__stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial__text">«Алексей — невероятный мастер. Свадебные фото получились как кадры из кино. Спасибо за терпение и стиль!»</p>
+                <p class="testimonial__author">Анна М.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="testimonial-card">
+                <div class="testimonial__avatar">
+                  <img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Дмитрий">
+                </div>
+                <div class="testimonial__stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial__text">«Заказывал портретную съёмку. Результат превзошёл ожидания. Пунктуальность, профессионализм — 10/10.»</p>
+                <p class="testimonial__author">Дмитрий К.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="testimonial-card">
+                <div class="testimonial__avatar">
+                  <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Елена">
+                </div>
+                <div class="testimonial__stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial__text">«Детская фотосессия прошла на ура. Легко нашёл подход к ребёнку, кадры живые и тёплые. Рекомендую!»</p>
+                <p class="testimonial__author">Елена В.</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+            <div class="slider-dots" id="sliderDots"></div>
+            <button class="slider-btn" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КОНТАКТЫ И ФОРМА -->
+    <section id="contact" class="contact section">
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <h2 class="section-title section-title--left">Контакты</h2>
+          <p class="contact__text">Давайте обсудим вашу идеальную съёмку. Свяжитесь удобным способом или оставьте заявку.</p>
+          <div class="contact__socials">
+            <!-- ЗАМЕНИТЕ ССЫЛКИ -->
+            <a href="#" class="contact__link" target="_blank"><i class="fab fa-instagram"></i> alex.lanskoy</a>
+            <a href="#" class="contact__link" target="_blank"><i class="fab fa-telegram-plane"></i> @alex_lanskoy</a>
+            <a href="tel:+79001234567" class="contact__link"><i class="fas fa-phone-alt"></i> +7 (900) 123-45-67</a>
+            <a href="mailto:hello@lanskoy.photo" class="contact__link"><i class="fas fa-envelope"></i> hello@lanskoy.photo</a>
+          </div>
+        </div>
+
+        <div class="contact__form-wrapper reveal">
+          <form id="bookingForm" class="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" placeholder=" " required>
+              <label for="name">Ваше имя</label>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" placeholder=" " required>
+              <label for="phone">Телефон</label>
+            </div>
+            <div class="form-group">
+              <input type="date" id="date" required>
+              <label for="date">Дата съёмки</label>
+            </div>
+            <button type="submit" class="btn btn--accent form-btn">Отправить заявку</button>
+            <p class="form-hint">Нажимая, вы соглашаетесь на обработку данных</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__copy">© 2026 Алексей Ланской. Все права защищены.</div>
+      <div class="footer__nav">
+        <a href="#hero">Главная</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#pricing">Услуги</a>
+        <a href="#contact">Контакты</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
